@@ -23,7 +23,8 @@ const formvalidationSchema = yup.object({
 
 function EditUser({ data }) {
     const params = useParams();
-    const Index = data.findIndex((item) => item.id === params.id);
+    // eslint-disable-next-line
+    const Index = data.findIndex((item) => item.id == params.id);
     const details = data[Index];
 
     const navigate = useNavigate();

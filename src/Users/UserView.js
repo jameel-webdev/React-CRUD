@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 function UserView({ data }) {
 
     const params = useParams();
-    const Index = data.findIndex((item) => item.id === params.id);
+    // eslint-disable-next-line
+    const Index = data.findIndex((item) => item.id == params.id);
     const details = data[Index];
 
     return (
